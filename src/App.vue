@@ -4,9 +4,6 @@
     </main>
 </template>
 
-<script setup lang="ts">
-import { useSpotifyStore } from "./stores/spotify";
-const spotify = useSpotifyStore();
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
