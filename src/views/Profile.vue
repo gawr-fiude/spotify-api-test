@@ -4,17 +4,17 @@
 </template>
 
 <script setup lang="ts">
-import { useSpotifyStore } from "@/stores/spotify";
+import { useAuthStore } from "@/stores/spotify";
 import { onMounted } from "vue";
-const spotify = useSpotifyStore();
+const authStore = useAuthStore();
 
 onMounted(() => {
     // Ask for new Authentication on page
     addEventListener("beforeunload", () => {
-        spotify.authorizeSpotify(sessionStorage.getItem("spotify-verifier"));
+        authStore.authorizeSpotify(sessionStorage.getItem("spotify-verifier"));
     });
 
-    spotify.getSpotifyUser();
+    authStore.getSpotifyUser();
 });
 </script>
 

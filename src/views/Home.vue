@@ -1,11 +1,11 @@
 <template>
     <h2>Disclaimer</h2>
-    <button @click="spotify.authenticate()">Log in to Spotify</button>
+    <button @click="authStore.authenticate()">Log in to Spotify</button>
 </template>
 
 <script setup lang="ts">
-import { useSpotifyStore } from "@/stores/spotify";
-const spotify = useSpotifyStore();
+import { useAuthStore } from "@/stores/spotify";
+const authStore = useAuthStore();
 </script>
 
 <style scoped></style>

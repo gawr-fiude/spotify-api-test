@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
 import axios from "axios";
+import { defineStore } from "pinia";
 
-export const useSpotifyStore = defineStore("authentication", {
+export const useAuthStore = defineStore("authentication", {
     state: () => ({
         clientId: "4ffed0da2f8e489792487d9643886b66",
         accessToken: "",
