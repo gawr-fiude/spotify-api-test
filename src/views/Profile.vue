@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import { useAuthStore } from "@/stores/spotify";
+import { useAuthStore } from "@/stores/authentication";
 import { onMounted } from "vue";
 const authStore = useAuthStore();
 
