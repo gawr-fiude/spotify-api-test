@@ -45,17 +45,6 @@ export const useAuthStore = defineStore("authentication", {
                 },
             );
         },
-        async getSpotifyUser() {
-            this.getAccessToken().then((response) => {
-                console.log(response.data.access_token);
-
-                axios.get("https://api.spotify.com/v1/me", {
-                    headers: {
-                        Authorization: "Bearer " + response.data.access_token,
-                    },
-                });
-            });
-        },
     },
     getters: {
         verifier: (_) => sessionStorage.getItem("spotify-verifier"),
